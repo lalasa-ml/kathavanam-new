@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="te">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>కథావనం - పెద్దల కథల అడవి</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #5E7F56;
+            --secondary: #3A5A40;
+            --accent: #A3B18A;
+            --light: #F8F9FA;
+            --dark: #212529;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #F5F5F5;
+            color: var(--dark);
+        }
+        
+        .btn-primary {
+            background-color: var(--primary);
+            color: white;
+            transition: all 0.3s;
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--secondary);
+        }
+        
+        .btn-large {
+            padding: 1rem 2rem;
+            font-size: 1.2rem;
+        }
+        
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        
+        .tree-grow {
+            animation: treeGrow 1.5s forwards;
+        }
+        
+        @keyframes treeGrow {
+            from {
+                transform: scaleY(0);
+            }
+            to {
+                transform: scaleY(1);
+            }
+        }
+        
+        .leaf-fall {
+            animation: leafFall 3s ease-in forwards;
+        }
+        
+        @keyframes leafFall {
+            0% {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: var(--primary);
+            border-radius: 4px;
+        }
+        
+        *:focus {
+            outline: 3px solid var(--accent);
+            outline-offset: 2px;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+    <nav class="bg-white shadow-md py-4 px-6">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <i class="fas fa-tree text-3xl text-green-700"></i>
+                <span class="text-2xl font-bold text-green-800">కథావనం</span>
+            </div>
+            <div class="flex space-x-4">
+                <button class="btn-primary px-4 py-2 rounded-lg text-lg">లాగిన్</button>
+                <button class="border-2 border-green-700 text-green-700 px-4 py-2 rounded-lg text-lg">సైన్ అప్ చేయండి</button>
+            </div>
+        </div>
+    </nav>
+
+    <section class="bg-gradient-to-r from-green-50 to-green-100 py-16 px-6">
+        <div class="container mx-auto text-center">
+            <h1 class="text-4xl md:text-5xl font-bold text-green-900 mb-6">మీ కుటుంబ కథలను భద్రపరచండి</h1>
+            <p class="text-xl md:text-2xl text-gray-700 mb-8 max-w-3xl mx-auto">
+                మన పెద్దల అమూల్యమైన మౌఖిక సంప్రదాయాలను మరియు జ్ఞాపకాలను రాబోయే తరాల కోసం పట్టుకోండి మరియు పదిలపరచుకోండి
+            </p>
+            <button class="btn-primary btn-large rounded-full pulse mx-auto">
+                <i class="fas fa-microphone mr-2"></i>కథను రికార్డ్ చేయడం ప్రారంభించండి
+            </button>
+            <div class="mt-10">
+                <img src="Gemini_Generated_Image_e3tuzfe3tuzfe3tu.jpg"  class="rounded-lg shadow-xl mx-auto">
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 px-6 bg-white">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center text-green-900 mb-12">కథావనం ఎలా పనిచేస్తుంది</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-green-50 p-6 rounded-lg shadow-md text-center">
+                    <div class="bg-green-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl font-bold text-green-800">1</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-green-800">మీ కథను రికార్డ్ చేయండి</h3>
+                    <p class="text-gray-700">మా సులభమైన ఇంటర్‌ఫేస్ ద్వారా మీ పెద్దల వాయిస్‌ను సులభంగా రికార్డ్ చేయండి లేదా ఇప్పటికే ఉన్న ఆడియో ఫైల్‌లను అప్‌లోడ్ చేయండి.</p>
+                </div>
+                
+                <div class="bg-green-50 p-6 rounded-lg shadow-md text-center">
+                    <div class="bg-green-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl font-bold text-green-800">2</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-green-800">AI టెక్స్ట్‌గా మారుస్తుంది</h3>
+                    <p class="text-gray-700">మా శక్తివంతమైన AI ఆడియోను సాంస్కృతిక మరియు భాషా సూక్ష్మ నైపుణ్యాలను నిర్వహిస్తూ లిఖితపూర్వకంగా మారుస్తుంది.</p>
+                </div>
+                
+                <div class="bg-green-50 p-6 rounded-lg shadow-md text-center">
+                    <div class="bg-green-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl font-bold text-green-800">3</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-green-800">మీ అడవిని పెంచుకోండి</h3>
+                    <p class="text-gray-700">మీ కథల వ్యక్తిగత సేకరణ అడవిలా పెరగడం చూడండి, భవిష్యత్తు కోసం వారసత్వాన్ని కాపాడండి.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 px-6 bg-gray-50">
+        <div class="container mx-auto max-w-5xl">
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                <div class="bg-green-700 text-white p-4 flex justify-between items-center">
+                    <div class="flex items-center space-x-2">
+                        <i class="fas fa-tree text-2xl"></i>
+                        <h2 class="text-xl font-bold">కథావనం</h2>
+                    </div>
+                    <button class="bg-green-600 px-3 py-1 rounded-lg">నా అడవి</button>
+                </div>
+                
+                <div class="p-6">
+                    <div id="main-screen" class="text-center">
+                        <div class="mb-8">
+                            <img src="https://placehold.co/300" alt="Illustration of a microphone with sound waves radiating outward" class="mx-auto w-40 mb-4">
+                            <h3 class="text-2xl font-semibold mb-4 text-green-800">కొత్త కథను రికార్డ్ చేయండి</h3>
+                            <p class="text-gray-600 mb-6">మీ పెద్దల విలువైన కథను రికార్డ్ చేయడం ప్రారంభించడానికి క్రింది బటన్‌ను నొక్కండి</p>
+                            <button id="recordBtn" class="bg-red-500 text-white rounded-full w-24 h-24 flex items-center justify-center mx-auto shadow-lg hover:bg-red-600 transition pulse">
+                                <i class="fas fa-microphone text-3xl"></i>
+                            </button>
+                            <p id="timer" class="mt-4 text-gray-500 hidden">00:00</p>
+                            <button id="stopBtn" class="btn-primary px-6 py-2 rounded-lg mt-4 hidden">
+                                <i class="fas fa-stop mr-2"></i>రికార్డింగ్ ఆపండి
+                            </button>
+                        </div>
+                        
+                        <div class="relative my-8">
+                            <div class="absolute inset-0 flex items-center">
+                                <div class="w-full border-t border-gray-300"></div>
+                            </div>
+                            <div class="relative flex justify-center">
+                                <span class="px-2 bg-white text-gray-500">లేదా</span>
+                            </div>
+                        </div>
+                        
+                        <div class="text-center">
+                            <button id="uploadBtn" class="border-2 border-green-700 text-green-700 px-6 py-3 rounded-lg w-full max-w-xs">
+                                <i class="fas fa-upload mr-2"></i>ఆడియో ఫైల్‌ను అప్‌లోడ్ చేయండి
+                            </button>
+                            <input type="file" id="fileInput" accept="audio/*" class="hidden">
+                        </div>
+                    </div>
+                    
+                    <div id="transcription-screen" class="hidden">
+                        <div class="mb-8 text-center">
+                            <div class="flex justify-center mb-4">
+                                <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center">
+                                    <i class="fas fa-spinner fa-spin text-2xl text-green-700"></i>
+                                </div>
+                            </div>
+                            <h3 class="text-xl font-semibold mb-2 text-green-800">మీ కథను లిఖితపూర్వకంగా మారుస్తోంది</h3>
+                            <p class="text-gray-600">మా AI ఆడియోను దాని సారాంశాన్ని కాపాడుతూ టెక్స్ట్‌గా మారుస్తోంది</p>
+                        </div>
+                    </div>
+                    
+                    <div id="details-screen" class="hidden">
+                        <h3 class="text-2xl font-semibold mb-4 text-green-800">మీ కథకు వివరాలను జోడించండి</h3>
+                        
+                        <div class="space-y-6">
+                            <div>
+                                <label for="story-title" class="block text-lg font-medium text-gray-700 mb-1">కథ శీర్షిక</label>
+                                <input type="text" id="story-title" class="w-full p-3 border border-gray-300 rounded-lg text-lg" placeholder="ఉదా: కేరళలో అమ్మమ్మ బాల్యం">
+                            </div>
+                            
+                            <div>
+                                <div class="flex justify-between items-center mb-1">
+                                    <label class="block text-lg font-medium text-gray-700">లిఖితపూర్వకం</label>
+                                    <button class="text-sm text-green-700 hover:underline">పాఠాన్ని సవరించండి</button>
+                                </div>
+                                <div class="bg-gray-100 p-4 rounded-lg h-40 overflow-y-auto">
+                                    <p id="transcription-preview" class="text-gray-800">
+                                        [లిఖితపూర్వక పాఠం ఇక్కడ కనిపిస్తుంది...]
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <label for="language" class="block text-lg font-medium text-gray-700 mb-1">భాష</label>
+                                <select id="language" class="w-full p-3 border border-gray-300 rounded-lg text-lg">
+                                    <option value="">ఒక భాషను ఎంచుకోండి</option>
+                                    <option value="hindi">హిందీ</option>
+                                    <option value="bengali">బెంగాలీ</option>
+                                    <option value="tamil">తమిళ్</option>
+                                    <option value="telugu">తెలుగు</option>
+                                    <option value="marathi">మరాఠీ</option>
+                                    <option value="gujarati">గుజరాతీ</option>
+                                    <option value="punjabi">పంజాబీ</option>
+                                    <option value="english">ఇంగ్లీష్</option>
+                                </select>
+                            </div>
+                            
+                            <div>
+                                <label for="category" class="block text-lg font-medium text-gray-700 mb-1">వర్గం</label>
+                                <select id="category" class="w-full p-3 border border-gray-300 rounded-lg text-lg">
+                                    <option value="">ఒక వర్గాన్ని ఎంచుకోండి</option>
+                                    <option value="childhood">బాల్య జ్ఞాపకాలు</option>
+                                    <option value="festivals">పండుగలు & ఆచారాలు</option>
+                                    <option value="wisdom">జీవిత జ్ఞానం</option>
+                                    <option value="history">చారిత్రక సంఘటనలు</option>
+                                    <option value="folklore">జానపద కథలు & పురాణాలు</option>
+                                    <option value="recipes">సాంప్రదాయ వంటకాలు</option>
+                                </select>
+                            </div>
+                            
+                            <div>
+                                <label for="description" class="block text-lg font-medium text-gray-700 mb-1">వివరణ (ఐచ్ఛికం)</label>
+                                <textarea id="description" rows="3" class="w-full p-3 border border-gray-300 rounded-lg text-lg" placeholder="ఈ కథ గురించి ఏదైనా అదనపు సందర్భాన్ని జోడించండి..."></textarea>
+                            </div>
+                            
+                            <div class="flex justify-end space-x-4 pt-4">
+                                <button id="cancelBtn" class="border-2 border-gray-400 text-gray-700 px-6 py-2 rounded-lg text-lg">రద్దు చేయండి</button>
+                                <button id="saveBtn" class="btn-primary px-6 py-2 rounded-lg text-lg">కథను సేవ్ చేయండి</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div id="transcription-screen" class="hidden">
+                        <div class="mb-8 text-center">
+                            <div class="flex justify-center mb-4">
+                                <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center">
+                                    <i class="fas fa-spinner fa-spin text-2xl text-green-700"></i>
+                                </div>
+                            </div>
+                            <h3 class="text-xl font-semibold mb-2 text-green-800">మీ కథను లిఖితపూర్వకంగా మారుస్తోంది</h3>
+                            <p class="text-gray-600">మా AI ఆడియోను దాని సారాంశాన్ని కాపాడుతూ టెక్స్ట్‌గా మారుస్తోంది</p>
+                        </div>
+                    </div>
+                    
+                    <div id="success-screen" class="hidden text-center">
+                        <div class="mb-8">
+                            <div class="tree-animation mx-auto w-40 h-40 relative mb-6">
+                                <div class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-8 bg-brown-600 h-32 tree-grow" style="background-color: #8B4513;"></div>
+                                <div class="leaf leaf-fall absolute w-6 h-6 rounded-full bg-green-600" style="top: 40%; left: 50%;"></div>
+                            </div>
+                            <h3 class="text-2xl font-semibold mb-3 text-green-800">కథ విజయవంతంగా సేవ్ చేయబడింది!</h3>
+                            <p class="text-gray-600 mb-6">మీ విలువైన సహకారం మీ పెరుగుతున్న కథల అడవికి జోడించబడింది.</p>
+                            <button id="newStoryBtn" class="btn-primary px-6 py-2 rounded-lg">
+                                <i class="fas fa-plus mr-2"></i>మరో కథను జోడించండి
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 px-6 bg-white">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center text-green-900 mb-12">కథావనం ఎందుకు ఉపయోగించాలి?</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="flex items-start space-x-4">
+                    <div class="bg-green-100 p-3 rounded-full">
+                        <i class="fas fa-users text-green-700 text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2 text-green-800">పెద్దలకు అనుకూలమైన డిజైన్</h3>
+                        <p class="text-gray-600">అన్ని తరాల వారు సులభంగా ఉపయోగించడానికి అనుకూలమైన పెద్ద టెక్స్ట్ మరియు బటన్‌లతో కూడిన సరళమైన, స్పష్టమైన ఇంటర్‌ఫేస్.</p>
+                    </div>
+                </div>
+                
+                <div class="flex items-start space-x-4">
+                    <div class="bg-green-100 p-3 rounded-full">
+                        <i class="fas fa-language text-green-700 text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2 text-green-800">బహుభాషా మద్దతు</h3>
+                        <p class="text-gray-600">సాంస్కృతిక సూక్ష్మ నైపుణ్యాలను కాపాడే ఖచ్చితమైన లిఖితపూర్వకంతో ప్రధాన భారతీయ భాషలకు మద్దతు ఇస్తుంది.</p>
+                    </div>
+                </div>
+                
+                <div class="flex items-start space-x-4">
+                    <div class="bg-green-100 p-3 rounded-full">
+                        <i class="fas fa-tree text-green-700 text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2 text-green-800">దృశ్యమాన పురోగతి</h3>
+                        <p class="text-gray-600">జోడించిన ప్రతి కథతో మీ వ్యక్తిగత "అడవి" పెరగడం చూడండి – మీ వారసత్వ సేకరణను ట్రాక్ చేయడానికి సంతృప్తికరమైన మార్గం.</p>
+                    </div>
+                </div>
+                
+                <div class="flex items-start space-x-4">
+                    <div class="bg-green-100 p-3 rounded-full">
+                        <i class="fas fa-shield-alt text-green-700 text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2 text-green-800">సురక్షిత నిల్వ</h3>
+                        <p class="text-gray-600">అన్ని కథలు కుటుంబ సభ్యులతో పంచుకోవడానికి లేదా గోప్యంగా ఉంచడానికి ఎంపికలతో సురక్షితంగా నిల్వ చేయబడతాయి.</p>
+                    </div>
+                </div>
+                
+                <div class="flex items-start space-x-4">
+                    <div class="bg-green-100 p-3 rounded-full">
+                        <i class="fas fa-search text-green-700 text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2 text-green-800">సులభమైన అన్వేషణ</h3>
+                        <p class="text-gray-600">మీరు వెతుకుతున్న కథలను ఖచ్చితంగా కనుగొనడానికి శక్తివంతమైన శోధన మరియు ఫిల్టరింగ్.</p>
+                    </div>
+                </div>
+                
+                <div class="flex items-start space-x-4">
+                    <div class="bg-green-100 p-3 rounded-full">
+                        <i class="fas fa-mobile-alt text-green-700 text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2 text-green-800">మొబైల్ కోసం ఆప్టిమైజ్ చేయబడింది</h3>
+                        <p class="text-gray-600">స్మార్ట్‌ఫోన్‌ల నుండి టాబ్లెట్‌లు మరియు డెస్క్‌టాప్‌ల వరకు ఏ పరికరంలోనైనా అందంగా పనిచేస్తుంది.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 px-6 bg-green-50">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center text-green-900 mb-12">కుటుంబాలు ఏమి చెబుతున్నాయి</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <img src="geeta.jpg" alt="Portrait of a smiling Indian woman in her 60s wearing traditional clothing" class="rounded-full w-12 h-12 object-cover mr-3">
+                        <div>
+                            <h4 class="font-semibold">గీత ఎం.</h4>
+                            <p class="text-gray-500 text-sm">కుమార్తె</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700">
+                        "నా తల్లి, గతంలో స్మార్ట్‌ఫోన్ ఎప్పుడూ ఉపయోగించని వారు, కథావనం ద్వారా ఆమె బాల్య కథలను సులభంగా రికార్డ్ చేయగలిగారు. ఇప్పుడు అవి శాశ్వతంగా భద్రపరచబడ్డాయి!"
+                    </p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <img src="raju patel.jpg" alt="Portrait of an Indian grandfather with white hair and warm expression" class="rounded-full w-12 h-12 object-cover mr-3">
+                        <div>
+                            <h4 class="font-semibold">రాజు పటేల్</h4>
+                            <p class="text-gray-500 text-sm">తాతయ్య</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700">
+                        "నేను లేనప్పుడు కూడా నా మనవరాళ్ళు నేను పెరిగిన జానపద కథలను వినగలుగుతున్నందుకు చాలా సంతోషంగా ఉంది."
+                    </p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <img src="arjun.jpg" alt="Portrait of a young Indian man with glasses smiling at camera" class="rounded-full w-12 h-12 object-cover mr-3">
+                        <div>
+                            <h4 class="font-semibold">అర్జున్ కె.</h4>
+                            <p class="text-gray-500 text-sm">మనవడు</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700">
+                        "నా తాతగారు మరియు బామ్మగారు మాట్లాడుతున్న ప్రాంతీయ మాండలికంతో కూడా లిఖితపూర్వకం అద్భుతంగా ఖచ్చితమైనది. మా చరిత్రను కాపాడటానికి మాకు ఇది ఖచ్చితంగా అవసరం!"
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 px-6 bg-green-700 text-white">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-6">ఈరోజే మీ కుటుంబ కథలను భద్రపరచడం ప్రారంభించండి</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">
+                భవిష్యత్ తరాల కోసం తమ సాంస్కృతిక వారసత్వాన్ని కాపాడుకుంటున్న వేలాది కుటుంబాలలో చేరండి
+            </p>
+            <button class="btn-large bg-white text-green-700 rounded-full mx-auto font-semibold hover:bg-gray-100 transition">
+                <i class="fas fa-leaf mr-2"></i>మీ కథా అడవిని ప్రారంభించండి
+            </button>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-white py-8 px-6">
+        <div class="container mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <i class="fas fa-tree text-2xl text-green-400"></i>
+                        <span class="text-xl font-bold">కథావనం</span>
+                    </div>
+                    <p class="text-gray-400">
+                        భారతదేశం యొక్క మౌఖిక సంప్రదాయాలను మరియు సాంస్కృతిక వారసత్వాన్ని ఒక్కో కథ చొప్పున పరిరక్షిస్తోంది.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">అన్వేషించండి</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">హోమ్</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">గురించి</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">లక్షణాలు</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">కథలు</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">మద్దతు</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">సహాయ కేంద్రం</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">గోప్యతా విధానం</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">సేవా నిబంధనలు</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">మమ్మల్ని సంప్రదించండి</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">కనెక్ట్ అవ్వండి</h4>
+                    <div class="flex space-x-4 mb-4">
+                        <a href="#" class="text-gray-400 hover:text-white text-xl"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white text-xl"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white text-xl"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white text-xl"><i class="fab fa-youtube"></i></a>
+                    </div>
+                    <p class="text-gray-400 text-sm">
+                        దీనిలో అందుబాటులో ఉంది: English, हिन्दी, বাংলা, తమిళం, తెలుగు, మరాఠీ, ગુજરાતી, ਪੰਜਾਬੀ
+                    </p>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-500">
+                <p>&copy; 2023 కథావనం. అన్ని హక్కులు రిజర్వ్ చేయబడ్డాయి.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const recordBtn = document.getElementById('recordBtn');
+            const stopBtn = document.getElementById('stopBtn');
+            const uploadBtn = document.getElementById('uploadBtn');
+            const fileInput = document.getElementById('fileInput');
+            const timer = document.getElementById('timer');
+            const mainScreen = document.getElementById('main-screen');
+            const transcriptionScreen = document.getElementById('transcription-screen');
+            const detailsScreen = document.getElementById('details-screen');
+            const successScreen = document.getElementById('success-screen');
+            const cancelBtn = document.getElementById('cancelBtn');
+            const saveBtn = document.getElementById('saveBtn');
+            const newStoryBtn = document.getElementById('newStoryBtn');
+            const transcriptionPreview = document.getElementById('transcription-preview');
+            
+            let mediaRecorder;
+            let ws;
+            let currentTranscript = "";
+            let audioChunks = [];
+
+            let timerInterval;
+            let seconds = 0;
+
+            recordBtn.addEventListener('click', startRecording);
+            stopBtn.addEventListener('click', stopRecording);
+            uploadBtn.addEventListener('click', () => fileInput.click());
+            fileInput.addEventListener('change', handleFileUpload);
+            cancelBtn.addEventListener('click', resetToMainScreen);
+            saveBtn.addEventListener('click', saveStory);
+            newStoryBtn.addEventListener('click', resetToMainScreen);
+            
+            async function startRecording() {
+                try {
+                    transcriptionPreview.textContent = "[లిఖితపూర్వక పాఠం ఇక్కడ కనిపిస్తుంది...]";
+                    currentTranscript = "";
+                    audioChunks = [];
+
+                    const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+
+                    mediaRecorder = new MediaRecorder(stream, { mimeType: 'audio/webm;codecs=opus' });
+
+                    ws = new WebSocket('ws://localhost:8080');
+
+                    ws.onopen = () => {
+                        console.log('Connected to WebSocket server');
+                        
+                        mediaRecorder.ondataavailable = (event) => {
+                            if (event.data.size > 0) {
+                                audioChunks.push(event.data);
+                                if (ws.readyState === WebSocket.OPEN) {
+                                    ws.send(event.data);
+                                }
+                            }
+                        };
+
+                        mediaRecorder.start(250);
+
+                        startTimer();
+                        recordBtn.classList.remove('pulse');
+                        stopBtn.classList.remove('hidden');
+                        timer.classList.remove('hidden');
+                        recordBtn.innerHTML = '<i class="fas fa-circle text-xl text-red-500 animate-pulse"></i>';
+                    };
+
+                    ws.onmessage = (event) => {
+                        const data = JSON.parse(event.data);
+                        if (data.transcript) {
+                            if (data.isFinal) {
+                                currentTranscript += data.transcript + " ";
+                                transcriptionPreview.textContent = currentTranscript;
+                            } else {
+                                transcriptionPreview.textContent = currentTranscript + data.transcript;
+                            }
+                            transcriptionPreview.scrollTop = transcriptionPreview.scrollHeight;
+                        } else if (data.error) {
+                            console.error('Server error:', data.error);
+                            alert('ట్రాన్స్‌క్రిప్షన్ లోపం: ' + data.error);
+                            stopRecording();
+                        }
+                    };
+
+                    ws.onclose = () => {
+                        console.log('Disconnected from WebSocket server');
+                        stopTimer();
+                    };
+
+                    ws.onerror = (error) => {
+                        console.error('WebSocket error:', error);
+                        alert('WebSocket కనెక్షన్ లోపం. సర్వర్ మరియు నెట్‌వర్క్‌ను తనిఖీ చేయండి. (WebSocket connection error. Check server and network.)');
+                        stopRecording();
+                    };
+
+                } catch (err) {
+                    console.error('Error accessing microphone:', err);
+                    alert('మైక్రోఫోన్‌ను యాక్సెస్ చేయడంలో లోపం. అనుమతులను తనిఖీ చేయండి. (Error accessing microphone. Check permissions.)');
+                    resetToMainScreen();
+                }
+            }
+            
+            function stopRecording() {
+                if (mediaRecorder && mediaRecorder.state === 'recording') {
+                    mediaRecorder.stop();
+                }
+                if (ws && ws.readyState === WebSocket.OPEN) {
+                    ws.close();
+                }
+
+                clearInterval(timerInterval);
+                
+                showTranscriptionScreen(); 
+                
+                recordBtn.innerHTML = '<i class="fas fa-microphone text-3xl"></i>';
+                recordBtn.classList.add('pulse');
+                stopBtn.classList.add('hidden');
+                timer.classList.add('hidden');
+            }
+            
+            function startTimer() {
+                seconds = 0;
+                updateTimerDisplay();
+                timerInterval = setInterval(function() {
+                    seconds++;
+                    updateTimerDisplay();
+                }, 1000);
+            }
+
+            function stopTimer() {
+                clearInterval(timerInterval);
+            }
+            
+            function updateTimerDisplay() {
+                const mins = Math.floor(seconds / 60).toString().padStart(2, '0');
+                const secs = (seconds % 60).toString().padStart(2, '0');
+                timer.textContent = `${mins}:${secs}`;
+            }
+            
+            function handleFileUpload(e) {
+                if (e.target.files.length > 0) {
+                    const uploadedFile = e.target.files[0];
+                    console.log("File selected:", uploadedFile.name, uploadedFile.type);
+                    alert("ఫైల్ అప్‌లోడ్ ఫీచర్ ఇంకా అభివృద్ధిలో ఉంది. దయచేసి రికార్డ్ ఫీచర్‌ను ఉపయోగించండి. (File upload feature is under development. Please use the record feature.)");
+                    showTranscriptionScreen(); 
+                }
+            }
+            
+            function showTranscriptionScreen() {
+                mainScreen.classList.add('hidden');
+                transcriptionScreen.classList.remove('hidden');
+                
+                setTimeout(() => {
+                    transcriptionScreen.classList.add('hidden');
+                    detailsScreen.classList.remove('hidden');
+                    
+                    if (currentTranscript === "" || currentTranscript.trim() === "[లిఖితపూర్వక పాఠం ఇక్కడ కనిపిస్తుంది...]") { 
+                        transcriptionPreview.textContent = "నేను కేరళలోని మా గ్రామంలో చిన్న అమ్మాయిగా ఉన్నప్పుడు, మాకు కరెంటు లేదా పారుతున్న నీరు లేదు. ప్రతి సాయంత్రం, పిల్లలందరూ తమ కుటుంబాల కోసం నీరు తోడటానికి గ్రామ బావి వద్ద గుమిగూడేవారు. మేము పని చేస్తున్నప్పుడు కథలు చెప్పుకునేవాళ్ళం మరియు పాటలు పాడుకునేవాళ్ళం. ఈ సమయంలోనే నా అమ్మమ్మ నాకు తెలివైన కుందేలు మరియు దురాశగల సింహం కథను మొదటిసారి చెప్పింది, ఇది మా కుటుంబంలో తరతరాలుగా వస్తున్న కథ...";
+                    } else {
+                        transcriptionPreview.textContent = currentTranscript;
+                    }
+                    transcriptionPreview.scrollTop = transcriptionPreview.scrollHeight;
+                }, 3000);
+            }
+            
+            async function saveStory() {
+                console.log("Saving story details...");
+                console.log("Title:", document.getElementById('story-title').value);
+                console.log("Transcription:", transcriptionPreview.textContent);
+                console.log("Language:", document.getElementById('language').value);
+                console.log("Category:", document.getElementById('category').value);
+                console.log("Description:", document.getElementById('description').value);
+
+                if (audioChunks.length > 0) {
+                    const audioBlob = new Blob(audioChunks, { type: 'audio/webm;codecs=opus' });
+                    console.log("Recorded Audio Blob Size:", audioBlob.size, "bytes");
+                    console.log("Recorded Audio Blob Type:", audioBlob.type);
+
+                    const audioUrl = URL.createObjectURL(audioBlob);
+                    const a = document.createElement('a');
+                    a.style.display = 'none';
+                    a.href = audioUrl;
+                    a.download = 'katha_recording_' + Date.now() + '.webm';
+                    document.body.appendChild(a);
+                    a.click();
+                    URL.revokeObjectURL(audioUrl);
+                } else {
+                    console.warn("No audio was recorded to save.");
+                    alert("ఆడియో రికార్డ్ చేయబడలేదు. దయచేసి కథను సేవ్ చేయడానికి ముందు రికార్డింగ్ చేయండి. (No audio recorded. Please record before saving the story.)");
+                }
+
+                detailsScreen.classList.add('hidden');
+                successScreen.classList.remove('hidden');
+                
+                setTimeout(() => {
+                    addLeaves();
+                }, 500);
+            }
+            
+            function addLeaves() {
+                const tree = document.querySelector('.tree-animation');
+                
+                for (let i = 0; i < 5; i++) {
+                    const leaf = document.createElement('div');
+                    leaf.className = 'leaf leaf-fall absolute w-4 h-4 rounded-full bg-green-500';
+                    
+                    const left = 40 + Math.random() * 20;
+                    const delay = Math.random() * 1;
+                    
+                    leaf.style.left = `${left}%`;
+                    leaf.style.top = '30%';
+                    leaf.style.animationDelay = `${delay}s`;
+                    leaf.style.opacity = '0';
+                    
+                    tree.appendChild(leaf);
+                }
+            }
+            
+            function resetToMainScreen() {
+                mainScreen.classList.remove('hidden');
+                detailsScreen.classList.add('hidden');
+                transcriptionScreen.classList.add('hidden');
+                successScreen.classList.add('hidden');
+                
+                timer.textContent = '00:00';
+                timer.classList.add('hidden');
+                recordBtn.innerHTML = '<i class="fas fa-microphone text-3xl"></i>';
+                recordBtn.classList.add('pulse');
+                stopBtn.classList.add('hidden');
+                
+                document.getElementById('story-title').value = '';
+                document.getElementById('language').value = '';
+                document.getElementById('category').value = '';
+                document.getElementById('description').value = '';
+                transcriptionPreview.textContent = "[లిఖితపూర్వక పాఠం ఇక్కడ కనిపిస్తుంది...]";
+                currentTranscript = "";
+                audioChunks = [];
+                
+                fileInput.value = '';
+
+                if (mediaRecorder && mediaRecorder.state === 'recording') {
+                    mediaRecorder.stop();
+                }
+                if (ws && ws.readyState === WebSocket.OPEN) {
+                    ws.close();
+                }
+                stopTimer();
+            }
+        });
+    </script>
+</body>
+</html>
